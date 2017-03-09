@@ -1,0 +1,44 @@
+
+class BankAccount
+  class Error < StandardError; end
+  class BalanceNegative < Error; end
+
+  def initialize
+    @balance = 0
+  end
+
+  def deposit!(amount)
+    increse_balance!(amount)
+
+    self
+  end
+
+  def withdraw!(amount)
+    if enough_money?(amount)
+      reduce_balance!(amount)
+    else
+      raise StandardError, 'Not enough money!'
+    end
+
+    self
+  end
+
+  def balance
+    @balance
+  end
+
+  private
+
+  def enough_money?(amount)
+    balance >= amount
+  end
+
+  def reduce_balance!(amount)
+    @balance = @balance - amount
+  end
+
+  def increse_balance!(amount)
+    @balance = @balance + amount
+  end
+
+end
