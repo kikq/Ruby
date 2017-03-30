@@ -15,10 +15,10 @@ A ruby script, which scans my gmail for certain types of email, and does somethi
 -Get it to print in UTF-8! /nope
 
 -FEATURE REQUEST
-              * Try reading the Gmail username and password from ~/.mail.auth
-              * If the credentials don't exist, ask the user for their username and password
-              * After the user has entered their credentials, ask if they want to save their credentials
-              * If they want to save their credentials, save them in ~/.mail.auth
+              > Try reading the Gmail username and password from ~/.mail.auth
+              > If the credentials don't exist, ask the user for their username and password
+              > After the user has entered their credentials, ask if they want to save their credentials
+              > If they want to save their credentials, save them in ~/.mail.auth
 
 # What have I done so far
 
